@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Bootstrap dependencies-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <style>
+        .form-group {
+            margin: 5px;
+        }
+    </style>
+
+    <title>New Staff Onboarding Form</title>
+</head>
+<body>
+<div class="container-fluid p-0">
+    <form class="mt-3" th:action="@{/summary}" method="post">
+        <h1 class="text-center">New Staff Onboarding Form</h1>
+        <div class="form-group row">
+            <label for="tfn" class="col-sm-2 col-form-label">TFN:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="tfn" name="tfn" required>
+            </div>
+        </div><br>
+        <div class="form-group row">
+            <label for="firstName" class="col-sm-2 col-form-label">First Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="firstName" name="firstName" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lastName" class="col-sm-2 col-form-label">Last Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="lastName" name="lastName" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="dob" class="col-sm-2 col-form-label">Date of Birth:</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="address" class="col-sm-2 col-form-label">Address:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="suburb" class="col-sm-2 col-form-label">Suburb:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="suburb" name="suburb" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="state" class="col-sm-2 col-form-label">State:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="state" name="state" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="postcode" class="col-sm-2 col-form-label">Postcode:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="postcode" name="postcode" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="phone" name="phone" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="email" name="email" required>
+            </div>
+        </div><br>
+
+        <div class="form-group row">
+            <label for="emergencyContact" class="col-sm-2 col-form-label">Emergency Contact:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="emergencyContact" name="emergencyContact" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="emergencyPhone" class="col-sm-2 col-form-label">Emergency Contact Phone:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="emergencyPhone" name="emergencyPhone" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="emergencyEmail" class="col-sm-2 col-form-label">Emergency Contact Email:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="emergencyEmail" name="emergencyEmail" required>
+            </div>
+        </div><br>
+
+        <div class="form-group row">
+            <label for="position" class="col-sm-2 col-form-label">Position:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="position" name="position" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="department" class="col-sm-2 col-form-label">Department:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="department" name="department" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="startDate" class="col-sm-2 col-form-label">Start Date:</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="startDate" name="startDate" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="salary" class="col-sm-2 col-form-label">Salary:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="salary" name="salary" required>
+            </div>
+        </div><br>
+
+        <div class="form-group row">
+            <label for="bankAccountName" class="col-sm-2 col-form-label">Bank Account Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="bankAccountName" name="bankAccountName" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="bankBsb" class="col-sm-2 col-form-label">Bank Account BSB:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="bankBsb" name="bankBsb" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="bankAccount" class="col-sm-2 col-form-label">Bank Account Number:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="bankAccount" name="bankAccount" required>
+            </div>
+        </div><br>
+        <div class="form-group row">
+            <label for="superFund" class="col-sm-2 col-form-label">Superannuation Fund Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="superFund" name="superFund" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="superFundNumber" class="col-sm-2 col-form-label">Superannuation Fund Number:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="superFundNumber" name="superFundNumber" required>
+            </div>
+        </div><br>
+        <div class="form-group row">
+            <label for="notes" class="col-sm-2 col-form-label">Notes:</label>
+            <div class="col-sm-10">
+                <textarea name="notes" id="notes" rows="4" cols="58" placeholder="Enter your notes here"></textarea>
+            </div>
+        </div><br>
+        <div class="mb-3 row">
+            <div class="col-6">
+                    <div class="col-6" style="margin-left: 5px"><button class="btn btn-primary w-100" type="submit">Send</button>
+                    </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

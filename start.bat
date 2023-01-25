@@ -1,0 +1,1 @@
+java -jar target/recruit-1.jar
